@@ -22,7 +22,7 @@ resource "aws_security_group" "allow_all" {
 
 resource "aws_instance" "devops" {
   ami           = "ami-0f5ee92e2d63afc18"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   key_name      = "jenkins-key"
 
   vpc_security_group_ids = [aws_security_group.allow_all.id]
